@@ -115,7 +115,43 @@ text-decoration: none;
 #fc img.top:hover {
   opacity:0;
 }
+.navigation2 ol {
+padding: 0px 0px 0px 0px;
+margin: 0px 0px 0px 0px;
+}
 
 
+.navigation2 {  
+background-color: #75F514;  
+padding: 0px 0px 0px 0px;  
+width: 100%;  
+display: table;
+border-top-style: solid;
+}
 
+.navigation2 a:link {  
+color: #ffffff;
+}
+
+.navigation2 a:visited {  
+color: #ffff00;
+text-decoration: none;
+}
+.navigation2 li1, li2, li3 {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+	width: 33.333333334%;
+	}
+	
+.navigation2 li1:hover {
+	background-color: #1d33f9;
+	}
+.navigation2 li2:hover {
+	background-color: #ef1f1f;
+	}
+.navigation2 li3:hover {
+	background-color: #38e4ff;
+	}
 
