@@ -93,6 +93,28 @@ text-decoration: none;
   opacity:0;
 }
 
+#fc {
+  position:relative;
+  width:100%;
+  height:600px;
+  margin:0 auto;
+  border-bottom-style: solid;
+  border-top-style: solid;
+}
+
+#fc img {
+  position:absolute;
+  left:0;
+  height:600px;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#fc img.top:hover {
+  opacity:0;
+}
 
 
 
