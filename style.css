@@ -1,7 +1,9 @@
 h1 {
-	background-color: orange;
-	border-style: solid;
+	background-color: #75F514;
 	text-align: center;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	border-bottom-style: solid;
 	}
 	
 h2 {
@@ -23,11 +25,9 @@ background-color: #FFFFFF;
 width: 80%;  
 margin-left: auto;  
 margin-right: auto;
+border-style: solid;
 }
 
-.mainContent { 
-padding: 0px 5px 10px 5px;
-}
 
 .navigation ol {
 padding: 0px 0px 0px 0px;
@@ -37,10 +37,10 @@ margin: 0px 0px 0px 0px;
 
 .navigation {  
 background-color: #009933;  
-color: #FFFFFF;
 padding: 0px 0px 0px 0px;  
 width: 100%;  
 display: table;
+border-bottom-style: solid;
 }
 
 .navigation a:link {  
