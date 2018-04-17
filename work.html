@@ -7,7 +7,11 @@ type="text/css" />
 		<title>title</title>
 	</head>
 	<body>
-		<h1>title</h1>
+		<div class="title">
+		<img class="logo" src="logo.jpg"/>
+		<h1 class="worktitle">title</h1>
+		</div>
+		
 		<div class="navigation">      
 			<ol>        
 			<li><a id="home" href="index.html">Home</a></li>        
@@ -18,6 +22,43 @@ type="text/css" />
 		
 		
 		</br>
+		<button onclick="Function1()">Function1</button>
+		<button onclick="Function2()">Function2</button>
+		
+
+		<script>
+		
+		//FUNCTION 1
+			function Function1() {
+			var val1 = prompt("Please enter value that you want to square by itself", "1");
+			alert(val1**val1);
+			}
+		//FUNCTION 2
+			function Function2() {
+			var val1 = prompt("Please enter first value", "1");
+			var val2 = prompt("Please enter second value", "2");
+			var val3 = prompt("Please enter third value", "3");
+			var VAL1 = parseInt(val1);
+			var VAL2 = parseInt(val2);
+			var VAL3 = parseInt(val3);
+			alert(VAL1+VAL2+VAL3);
+			}
+			
+			//object literal
+var myObject = {name: "Jack", grade:"A", level:3};
+myObject.name = "Jeff";
+Window.alert(myObject.level); //outputs 3
+//dynamic object
+var exampleObject = new Object();
+exampleObject.name = "Jeff";
+exampleObject[“name”] = "Bob";
+exampleObject.output = new function()…
+			
+		
+			
+			
+		</script>
+		
 		</br>
 		
 		
