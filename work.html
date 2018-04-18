@@ -144,18 +144,117 @@ type="text/css" />
 		
 		<h3>Iteration 4</h3>
 		<form>
-			Enter your selected number:
+			Enter your number:
 		<input type="text" id="iter4input" name="name"><br>
 		</form>
 		<button onclick="iter4exec()">Check Number</button>
 		
 		
-
-
-
+		</br>
+		</br>
+		</br>
+		
+		
+		<h3>String 4</h3>
+		<form>
+			Enter your text:
+		<input type="text" id="str4input" name="name"><br>
+		</form>
+		<button onclick="str4exec()">Check Text</button>
 		
 
+		</br>
+		</br>
+		</br>
+		
+		
+		<h3>DOM 1</h3>
+		<p id="demo"></p>
+		<form>
+			Paragraph Number:
+		<input type="text" id="dom1input" name="name"><br>
+		</form>
+		<form>
+			Text:
+		<input type="text" id="dom1input1" name="name"><br>
+		</form>
+		<div id="div1">Paragraphs will display above</div>
+		<button onclick="deletedom()">Delete</button>
+		<button onclick="adddom()">Add New</button>
+		<button onclick="changedom()">Change</button>
+		
+		</br>
+		</br>
+		</br>
+		
+		
+		<h3>JSON 1</h3>
+		<button onclick="json1()">ExecuteJson</button>
+
 		<script>
+		//JSON1
+		function json1(){
+		var requestURL = "https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json";
+		var request = new XMLHttpRequest();
+		request.open("GET", requestURL);
+		request.responseType = "json"
+		request.send();
+		request.onload = function() {
+		var requestData = request.response;
+		var myH1 = document.createElement("h1");
+		myH1.textContent = requestData["squadName"];
+		document.getElementsByTagName("head")[0].appendChild(myH1);
+		console.log(myH1);
+		}
+		}
+		
+		// DOM 1
+		function changedom(){
+				var newcontextt = document.getElementById("dom1input1").value;
+				var newContent = document.createTextNode(newcontextt + " (paragraph no: " + n + ")"); 
+				var stringgg = document.getElementById("dom1input").value;
+				var child = document.getElementById("p"+stringgg)
+				child.appendChild(newContent);
+				
+				}
+			var n=0;
+			function adddom(){
+				var newContent = document.createTextNode(" (paragraph no: " + n + ")"); 
+				var newDiv = document.createElement("div"+n); 
+				newDiv.appendChild(newContent);
+				newDiv.setAttribute("id","p"+n);
+				var currentDiv = document.getElementById("div1"); 
+				document.body.insertBefore(newDiv, currentDiv);
+				n++
+			}
+			
+			function deletedom(){
+				var stringgg = document.getElementById("dom1input").value;
+				var child = document.getElementById("p"+stringgg);
+				child.parentNode.removeChild(child);
+			}
+		
+		
+		
+		
+		
+		//STRING 5
+		function str4exec(){
+		var stringgg = document.getElementById("str4input").value;
+		var arrray = stringgg.toLowerCase().split('');
+		var lengthhh = arrray.length;
+		var n=0;
+		for(var i = 0; i < (lengthhh -2); i++){
+			if (arrray[i] === arrray[i+1] && arrray[i+1] === arrray[i+2]){
+			n++
+			}
+		}
+		console.log("The number of Triples in your text is:  " + n);
+		
+		
+		}
+		
+		
 		//ITERATION 4
 			function iter4exec(){
 			var val1 = document.getElementById("iter4input").value;
@@ -180,7 +279,7 @@ type="text/css" />
 			if (VAL1 % 3 === 2){ 
 			var val2 = ((VAL1+1)/3)
 			console.log("Value: " + VAL1 + " needs +1 to be divisible by 3 and give: " + val2);
-			VAL1=val2;
+			VAL1=val2;20
 			}
 			
 			
