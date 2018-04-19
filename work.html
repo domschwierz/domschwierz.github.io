@@ -15,7 +15,7 @@ type="text/css" />
 		<div class="navigation">      
 			<ol>        
 			<li><a id="home" href="index.html">Home</a></li>        
-			<li><a href="about.html">About</a></li>        
+			<li><a href="work2.html">work2</a></li>        
 			<li><a href="projectlist.html">Project List</a></li> 
 			</ol>
 		</div>
@@ -172,11 +172,11 @@ type="text/css" />
 		<p id="demo"></p>
 		<form>
 			Paragraph Number:
-		<input type="text" id="dom1input" name="name"><br>
+		<input type="text" id="paranum" name="name"><br>
 		</form>
 		<form>
 			Text:
-		<input type="text" id="dom1input1" name="name"><br>
+		<input type="text" id="paratext" name="name"><br>
 		</form>
 		<div id="div1">Paragraphs will display above</div>
 		<button onclick="deletedom()">Delete</button>
@@ -210,11 +210,11 @@ type="text/css" />
 		
 		// DOM 1
 		function changedom(){
-				var newcontextt = document.getElementById("dom1input1").value;
+				var newcontextt = document.getElementById("paratext").value;
 				var newContent = document.createTextNode(newcontextt + " (paragraph no: " + n + ")"); 
-				var stringgg = document.getElementById("dom1input").value;
+				var stringgg = document.getElementById("paranum").value;
 				var child = document.getElementById("p"+stringgg)
-				child.appendChild(newContent);
+				stringgg.appendChild(newContent);
 				
 				}
 			var n=0;
@@ -229,7 +229,7 @@ type="text/css" />
 			}
 			
 			function deletedom(){
-				var stringgg = document.getElementById("dom1input").value;
+				var stringgg = document.getElementById("paranum").value;
 				var child = document.getElementById("p"+stringgg);
 				child.parentNode.removeChild(child);
 			}
