@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<link href="style2.css" 
+rel="stylesheet" 
+type="text/css" />
+	<head>
+		<title>Title</title>
+	</head>
+	<body>
+
+		<h1>The PogChamp Converter</h1>
+		
+		<form>
+			Enter number that you want to convert:
+		<input type="number" id="value" name="name"><br>
+		</form></br>
+		<button onclick="ytm()">Years to Months</button></br>
+		<button onclick="ytd()">Years to Days</button></br></br>
+		<button onclick="mty()">Months to Years</button></br>
+		<button onclick="mtd()">Months to Days</button></br></br>
+		<button onclick="dtm()">Days to Months</button></br>
+		<button onclick="dty()">Days to Years</button></br></br></br>
+		
+
+		<script>
+		let val1=0;
+		let output=0;
+		
+		
+		function ytm (){
+		val1 = document.getElementById("value").value;
+		if(val1>0){
+		output = val1*12;		
+		console.log(output + " Months");
+		}
+		else{
+		console.log("Enter a valid number");
+		}
+		}
+		function ytd (){
+		val1 = document.getElementById("value").value;
+		if(val1>0){
+		let output = val1*365;
+		console.log(output + " Days");
+		}
+		else{
+		console.log("Enter a valid number");
+		}
+		}
+		function mty (){
+		val1 = document.getElementById("value").value;
+		if(val1>0){
+		let output = val1/12;
+		console.log(output + " Years");
+		}
+		else{
+		console.log("Enter a valid number");
+		}
+		}
+		function mtd (){
+		val1 = document.getElementById("value").value;
+		if(val1>0){
+		let output = val1*30;
+		console.log(output + " Days");
+		}
+		else{
+		console.log("Enter a valid number");
+		}
+		}
+		function dtm (){
+		val1 = document.getElementById("value").value;
+		if(val1>0){
+		let output = val1/30;
+		console.log(output + " Months");
+		}
+		else{
+		console.log("Enter a valid number");
+		}
+		}
+		function dty (){
+		val1 = document.getElementById("value").value;
+		if(val1>0){
+		let output = val1/365;
+		console.log(output + " Years");
+		}
+		else{
+		console.log("Enter a valid number");
+		}
+		}
+		
+		
+		</script>
+		
+		
+		<div class="navigation2"> 
+			<h5>Visit us on:</h5>
+			<ol>        
+			<li1><a id="home" href="https://www.facebook.com/">Facebook</a></li1>        
+			<li2><a id="youtube" href="https://www.youtube.com/">Youtube</a></li2>        
+			<li3><a id="twitter" href="https://twitter.com/twitter">Twitter</a></li3> 
+			</ol>
+		</div>
+	</body>
+</html>

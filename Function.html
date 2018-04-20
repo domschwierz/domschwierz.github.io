@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<link href="style.css" 
+rel="stylesheet" 
+type="text/css" />
+	<head>
+		<title>Title</title>
+	</head>
+	<body>
+
+		<h1>Functions</h1>
+		
+		<div class="navigation">      
+			<ol>        
+			<li><a id="home" href="index.html">Home</a></li>        
+			<li><a href="work.html">Work</a></li>        
+			<li><a href="projectlist.html">Project List</a></li> 
+			</ol>
+		</div>
+		
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		 <h3>Founction 1</h3>
+		<form>
+			Value:
+		<input type="text" id="value" name="name"><br>
+		</form>
+		<button onclick="Function1()">Square</button>
+		
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		<h3>Function 2</h3>
+		<form>
+		Value 1:
+		<input type="text" id="value1" name="name"><br>
+		Value 2:
+		<input type="text" id="value2" name="name"><br>
+		Value 3:
+		<input type="text" id="value3" name="name"><br>
+		</form>
+		<button onclick="Function2()">Sum Values</button>
+
+		<script>
+			//FUNCTIONS 1
+			function Function1() {
+			var val1 = document.getElementById("value").value;
+			console.log("Your squared value is " + val1**val1)
+			}
+			
+			//FUNCTIONS 2
+			function Function2() {
+			var val1 = document.getElementById("value1").value;
+			var val2 = document.getElementById("value2").value;
+			var val3 = document.getElementById("value3").value;
+			var VAL1 = parseInt(val1);
+			var VAL2 = parseInt(val2);
+			var VAL3 = parseInt(val3);
+			console.log("Your value sum is " + (VAL1+VAL2+VAL3));
+			}
+		</script>
+		<div class="navigation2"> 
+			<h5>Visit us on:</h5>
+			<ol>        
+			<li1><a id="home" href="https://www.facebook.com/">Facebook</a></li1>        
+			<li2><a id="youtube" href="https://www.youtube.com/">Youtube</a></li2>        
+			<li3><a id="twitter" href="https://twitter.com/twitter">Twitter</a></li3> 
+			</ol>
+		</div>
+	</body>
+</html>

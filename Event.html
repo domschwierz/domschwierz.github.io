@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<link href="style.css" 
+rel="stylesheet" 
+type="text/css" />
+	<head>
+		<title>Event</title>
+	</head>
+	<body>
+
+		<h1>Event</h1>
+		
+		<div class="navigation">      
+			<ol>        
+			<li><a id="home" href="index.html">Home</a></li>        
+			<li><a href="work.html">Work</a></li>        
+			<li><a href="projectlist.html">Project List</a></li> 
+			</ol>
+		</div>
+		
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		<h3>Conditional 1</h3>
+		<p>Check if you're between 20-40 years old</p>
+		<form>
+			Enter your Age:
+		<input type="text" id="userageinput" name="name"><br>
+		</form>
+		<button onclick="checkage()">Check!</button>
+		
+		</br>
+		</br>
+		</br>
+		
+		 <h3>Variable 2 / Function 3 / Event 1 / Event 2</h3>
+		<form>
+			Update Value:
+		<input type="text" id="Updatevalue" name="name"><br>
+		</form>
+		<h4>Update</h4>
+		<button onclick="updatename()">Name</button>
+		<button onclick="updateoccupation()">Occupation</button>
+		<button onclick="add()">+1 Age</button>
+		<button onclick="takeaway()">-1 Age</button>
+		<h4>Display</h4>
+		<button onclick="displayname()">Name</button>
+		<button onclick="displayage()">Age</button>
+		<button onclick="displayoccupation()">Occupation</button>
+		<button onclick="display()">All</button>
+		
+		</br>
+		</br>
+		</br>
+		<script>
+		//Conditional 1
+		function checkage(){
+		var omg = document.getElementById("userageinput").value;
+		var VAL1 = parseInt(omg);
+		if (VAL1>19 && VAL1<41) {
+			console.log("True")
+		} else { 
+			console.log("False")
+		}
+		}
+		
+		//VARIABLES 2
+			var myObject = [{
+				name: "Dominik",
+				occupation: "Software Tester",
+				age: "21",}];
+			
+			function add(){
+					var age = parseInt(myObject[0].age);
+					myObject[0].age = String(age + 1);
+					console.log(myObject[0]);
+					};
+					
+			function takeaway(){
+					var age = parseInt(myObject[0].age);
+					myObject[0].age = String(age - 1);
+					console.log(myObject[0]);
+					};
+					
+			function updatename(){
+					var omg = document.getElementById("Updatevalue").value;
+					myObject[0].name = String(omg);
+					console.log(myObject[0]);
+					};
+					
+					
+			function updateoccupation() {
+					var omg = document.getElementById("Updatevalue").value;
+					myObject[0].occupation = String(omg);
+					console.log(myObject[0]);
+					};
+			
+					
+			function display(){
+			console.log(myObject[0].name +" "+ myObject[0].age +" "+ myObject[0].occupation)
+			}
+			function displayage(){
+			console.log(myObject[0].age)
+			}
+			function displayname(){
+			console.log(myObject[0].name)
+			}
+			function displayoccupation(){
+			console.log(myObject[0].occupation)
+			}
+		</script>
+		<div class="navigation2"> 
+			<h5>Visit us on:</h5>
+			<ol>        
+			<li1><a id="home" href="https://www.facebook.com/">Facebook</a></li1>        
+			<li2><a id="youtube" href="https://www.youtube.com/">Youtube</a></li2>        
+			<li3><a id="twitter" href="https://twitter.com/twitter">Twitter</a></li3> 
+			</ol>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<link href="style.css" 
+rel="stylesheet" 
+type="text/css" />
+	<head>
+		<title>String</title>
+	</head>
+	<body>
+
+		<h1>String</h1>
+		
+		<div class="navigation">      
+			<ol>        
+			<li><a id="home" href="index.html">Home</a></li>        
+			<li><a href="work.html">Work</a></li>        
+			<li><a href="projectlist.html">Project List</a></li> 
+			</ol>
+		</div>
+		
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		 
+		 <h3>Strings 1</h3>
+		<button onclick="displayoriginal()">Display Original</button>
+		<button onclick="displayconverted()">Display Converted</button>
+		
+		</br>
+		</br>
+		</br>
+		
+		<h3>Strings 2</h3>
+		<button onclick="concat()">Execute</button>
+		
+		</br>
+		</br>
+		</br>
+		
+		<h3>Array 1 / String 3</h3>
+		<form>
+			New Array:
+		<input type="text" id="newarray" name="name"><br>
+		</form>
+		<button onclick="arrays()">Display</button>
+		<button onclick="addarray()">Add Array</button>
+		<button onclick="removelast()">Delete Last</button>
+		<button onclick="removefirst()">Delete First</button>
+
+		</br>
+		</br>
+		</br>
+		
+		<h3>String 4</h3>
+		<form>
+			Enter your text:
+		<input type="text" id="str4input" name="name"><br>
+		</form>
+		<button onclick="str4exec()">Check Text</button>
+
+		</br>
+		</br>
+		</br>
+		
+		
+		<script>
+		//String 1
+		var original = "He said “My name is Elliott”"
+		
+		function displayoriginal(){
+		console.log(original)
+		}
+		
+		function displayconverted() {
+		var updated = original.toUpperCase();
+		console.log(updated)
+		}
+		
+		//String 2
+		function concat(){
+		var y = 32
+		var x = "kappa"
+		var z = x.concat(y);
+		console.log(z)
+		console.log(x+y)
+		}
+		
+		//String 3
+		var myList = ["oats","peas","beans"];
+		function arrays(){
+		console.log(myList)
+		}
+		
+		function addarray(){
+		var omg = document.getElementById("newarray").value;
+		myList[myList.length] = String(omg);
+		console.log(myList)
+		}
+		
+		function removelast(){
+		myList.splice(-1,1)
+		console.log(myList)
+		}
+		
+		function removefirst(){
+		myList.splice(0,1)
+		console.log(myList)
+		}
+		
+		//STRING 5
+		function str4exec(){
+		var stringgg = document.getElementById("str4input").value;
+		var arrray = stringgg.toLowerCase().split('');
+		var lengthhh = arrray.length;
+		var n=0;
+		for(var i = 0; i < (lengthhh -2); i++){
+			if (arrray[i] === arrray[i+1] && arrray[i+1] === arrray[i+2]){
+			n++
+			}
+		}
+		console.log("The number of Triples in your text is:  " + n);
+		
+		
+		}
+		</script>
+		<div class="navigation2"> 
+			<h5>Visit us on:</h5>
+			<ol>        
+			<li1><a id="home" href="https://www.facebook.com/">Facebook</a></li1>        
+			<li2><a id="youtube" href="https://www.youtube.com/">Youtube</a></li2>        
+			<li3><a id="twitter" href="https://twitter.com/twitter">Twitter</a></li3> 
+			</ol>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<link href="style2.css" 
+rel="stylesheet" 
+type="text/css" />
+	<head>
+		<title>Title</title>
+	</head>
+	<body>
+
+		<h1>The PogChamp Guesser</h1>
+		
+		<form>
+			Enter your guess! (Between 1 and 100):
+		<input type="number" id="value" name="name"><br>
+		</form>
+		<button onclick="dagame()">Goooo!</button></br>
+		<button onclick="cheat()">Cheat!</button></br>
+		<button onclick="reset()">Reset!</button>
+
+		<script>
+		let rannum = Math.floor((Math.random() * 100) + 1);
+		let i=1;
+		let val2 = 0;
+		
+		function reset() {
+		rannum = Math.floor((Math.random() * 100) + 1);
+		i=1;
+		val2 = 0;
+		console.log("New Game Started")
+		}
+		
+		function cheat() {
+		console.log("Random value generated is: " + rannum + " you filthy cheater")
+		}
+		function dagame(){
+		let val1 = document.getElementById("value").value;	
+			
+			if(i<=10){
+				if(i<=10 && val2 != 2){
+					if(val1>rannum && val1<=100 && val1>=1){
+					console.log("Lower! " + "Round: "+ i)
+					}
+		
+				else if(val1<rannum && val1<=100 && val1>=1){
+					console.log("Higher! " + "Round: "+ i)
+					}
+		
+				else if(val1==rannum && val1<=100 && val1>=1){
+					console.log("You Win! " + "It took you "+ i + " rounds")
+					val2 = 2;
+					}
+				else if(val1>100){
+					console.log("Can you not read? BETWEEN 1 AND 100")
+					}
+				else if(val1<1){
+					console.log("Can you not read? BETWEEN 1 AND 100")
+					}
+					
+					i++;
+				}
+			}
+			else {
+			console.log("You Lose! Reset to try again")
+			}
+		
+		}
+		
+		
+		
+		</script>
+		
+		
+		<div class="navigation2"> 
+			<h5>Visit us on:</h5>
+			<ol>        
+			<li1><a id="home" href="https://www.facebook.com/">Facebook</a></li1>        
+			<li2><a id="youtube" href="https://www.youtube.com/">Youtube</a></li2>        
+			<li3><a id="twitter" href="https://twitter.com/twitter">Twitter</a></li3> 
+			</ol>
+		</div>
+	</body>
+</html>
